@@ -1,0 +1,181 @@
+---
+layout: home
+main_image: /uploads/header-image.jpg
+---
+{% assign settings = settings.data.settings %}
+<nav id="menu">
+    {% include menu.html %}
+</nav>
+
+<main id="panel">
+  <div class="header color-overlay" {% if page.main_image %} style=" background: url({{ page.main_image }}) no-repeat center center; background-size: cover;"
+{% else %}style=" background: url({{settings.main_image}}) no-repeat center center; background-size: cover;" {% endif %}>
+<div class="top">
+  <ul class="socialbar">
+    <li><a href="tel:{{settings.phone }}"><i class="fa fa-phone"></i></a></li>
+    <li><a href="mailto: {{settings.church_email}}"><i class="fa fa-envelope"></i></a></li>
+    <li><a href="{{settings.facebook}}"><i class="fa fa-facebook"></i></a></li>
+  </ul>
+  <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+</span></a> 
+  </div><!--/top-->
+  <img src="{{site.data.settings.church_logo_image_path}}" alt="" />
+  <h1 class="editable">A small church with a big heart</h1>
+  <p class="editable">If you live in the Robinson, IL area you can find a church home where you are loved and can grow in the faith. At New Hebron Baptist Church we love Jesus, love the Bible and love people.</p>
+  <a href="#visit" class="cta button large">Plan A Visit</a>
+  <ul class="menu">
+  {% if site.data.events[0].Event_Title %}
+    <li><a href="#"><i class="fa fa-calendar"></i> View Upcoming Events</a></li>{% endif %}
+    <li><a href="#pastor"><i class="fa fa-user"></i> Meet Our Pastor</a></li>
+    <li><a href="#contact"><i class="fa fa-envelope"></i> Get In Touch</a></li>
+  </ul>
+</div><!--/header-->
+<div class="intro">
+  <h2 class="editable">What if you could find....</h2>
+  <div class="find-sections">
+  <div class="find-section editable">
+    <img src="http://sitesforchurch.s3.amazonaws.com/grace.jpg" alt="" />
+    <h3>GRACE</h3>
+    <p>Learn about what Jesus has done for you. He’s paved the way for you to have a meaningful relationship with God and an eternal home in heaven.</p>
+  </div><!--/find-section-->
+  <div class="find-section editable">
+    <img src="http://sitesforchurch.s3.amazonaws.com/purpose.jpg" alt="" />
+    <h3>PURPOSE</h3>
+    <p>Live for more than toys and a paycheck. Figure out what God made you. Be a part of something with eternal consequences.</p>
+  </div><!--/find-section-->
+  <div class="find-section editable">
+    <img src="http://sitesforchurch.s3.amazonaws.com/community.jpg" alt="" />
+    <h3>COMMUNITY</h3>
+    <p>Don’t go it alone. Find friends who share your deepest beliefs and will help and encourage you through life.</p>
+  </div><!--/find-section-->
+  <div class="find-section editable"><p><img alt="" src="http://sitesforchurch.s3.amazonaws.com/instruction.jpg" /></p><h3>INSTRUCTION</h3><p>Discover what God&rsquo;s word says. Hear it taught and explained regularly and let it nourish you and grow you in your Christian life.</p></div><!--/find-section-->
+  </div><!--/find-sections-->
+</div><!--/intro-->
+<div class="testimonials">
+  <div class="testimonials-wrapper">
+    {% for item in site.testimonials %}
+   
+  <div class="testimonial">
+    <img src="{{ item.thumbnail_image }}" alt="" />
+    {{ item.testimonial_markdown | markdownify }}
+    <p class="signature"> {{ item.person }}, {{item.hometown}}</p>
+  </div><!--/testimonial-->
+   {% endfor %}
+ 
+  </div><!--/testimonials-wrapper-->
+</div><!--/testimonials-->
+<div class="visit">
+  <h2 id="visit" class="editable">Plan A Visit</h2>
+  <p class="intro-text editable">Visiting a new church can be a scary experience. We want to put you at ease by answering the most common questions people have….</p>
+  <div class="visit-sections">
+   <div class="visit-section editable">
+    <img src="https://dl.airtable.com/dS50BgHjS8mYSOFya4wF_services.jpg" alt="" />
+    <div class="text">
+      <h3>What are services like?</h3>
+      <p>We sing hymns praising God for all he does, preaching lasts any where from 20 minutes to 40 minutes. We love church family fellowship, and love to see new people come to know Christ as their personal Lord and Savior!</p>
+
+    </div><!--/text-->
+    </div><!--/visit-section-->
+   
+  <div class="visit-section editable">
+    <img src="https://dl.airtable.com/bgTRr6Q2yctESfIBAVv3_donuts.jpg" alt="" />
+    <div class="text">
+      <h3>When do you meet?</h3>
+      <p>We meet every Sunday morning:</p>
+
+<ul>
+  <li>Sunday school starts at 9:30 Am</li>
+  <li>Regular service is at 10:30 Am</li>
+  <li>Evening service is at 6:30 PM</li>
+  <li>Wednesday evening starts at 6:30 PM</li>
+</ul>
+
+    </div><!--/text-->
+    </div><!--/visit-section-->
+   
+  <div class="visit-section editable">
+    <img src="https://dl.airtable.com/5YzAn3EWSlOY8n7lVRdO_kids.png" alt="" />
+    <div class="text">
+      <h3>Is there anything for my kids?</h3>
+      <p>We have a kids Sunday school. And we also have a Junior church during the morning sermon for kids ages 3-11. We also have a nursery avaliable for kids 0-3.</p>
+
+    </div><!--/text-->
+    </div><!--/visit-section-->
+   
+  <div class="visit-section editable">
+    <img src="https://dl.airtable.com/gbSnMT44SJKsvMzJcs98_Church.jpg" alt="" />
+    <div class="text">
+      <h3>Where do you meet?</h3>
+      <p>Our church is 4 miles south of Robinson on the west side of the road.</p>
+
+    </div><!--/text-->
+    </div><!--/visit-section-->
+   
+    </div><!--/visit-sections-->
+</div><!--/visit-->
+{% include map.html %}
+<div class="pastor">
+  <h2 id="pastor" class="editable">Meet Our Pastor</h2>
+  {% assign pastor = site.leaders | where: "Is_senior_pastor", true %} 
+
+  {% for item in pastor %}
+  <img src="{{ item.Thumbnail_path }}" alt="" />
+  {{ item.content }}
+  <ul class="pastor-contact">
+    <li class="email">{{ item.Email }} </li>
+    <li class="phone"> {{ item.Phone }} </li>
+  </ul>
+  {% endfor %}
+</div><!--/pastor-->
+{% if site.data.events[0].Event_Title %}
+<div class="events">
+  <h2>Upcoming Events</h2>
+
+  {% for event in site.data.featuredevent %}
+  <div class="featured-event">
+  <div class="image">
+    {% if event.Featured_Image %}
+    <img src="{{event.Featured_Image[0].url}}" alt="" />
+    {% else %}
+    <img src="http://placehold.it/600x337" alt="" />
+    {% endif %}
+  </div><!--/image-->
+    <div class="details">
+      <h4><a href="#">{{event.Event_Title}}</a></h4>
+      <p class="date"><strong>Date:</strong> {{event.Date | date: "%A, %B %-d"}}</p>
+      <p class="time"><strong>Time:</strong> {{event.Date | date: "%I:%M %p"}}</p>
+      <p class="description">
+        {{event.Event_Description}}
+      </p>
+      <a href="#" class="read-more">Read More</a>
+    </div><!--/details-->
+  </div><!--/featured-event-->
+  {% endfor %}
+  {% for event in site.data.events %}
+  <div class="single-event">
+      <div class="date-display">
+        <p class="number">{{event.Date | date: "%d"}}</p>
+        <p class="month">{{event.Date | date: "%b"}}</p>
+      </div><!--/date-display-->
+      <div class="event-info">
+        <h4><a href="#">{{event.Event_Title}}</a></h4>
+        <p class="date"><strong>Date:</strong> {{event.Date | date: "%A, %B %-d"}}</p>
+        <p class="time"><strong>Time:</strong> {{event.Date | date: "%I:%M %p"}}</p>
+      </div><!--/event-info-->
+  </div><!--/single-event-->
+  {% endfor %}
+</div><!--/events-->
+{% endif %}
+<div class="photos">
+  <div class="photos-inner" id="sqr-gallery">
+  {% for img in site.photo_gallery limit: 12 %}
+        <div class="photo"><a href="#" data-featherlight="{{img.image_path}}" style="background: url({{img.image_path }}) no-repeat center center; background-size: cover; width: 250px; height: 250px; line-height: 250px; display: block;"></a></div>
+      {% endfor %}
+  </div><!--/photos-inner-->
+</div><!--/gallery-->
+
+
+</main>
+{% include footer.html %}

@@ -1,0 +1,97 @@
+.header 
+    height: 80vh
+    padding-bottom: 20px
+    @include breakpoint(660px)
+        height: 70vh
+        padding-bottom: 40px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background: url(http://sitesforchurch.s3.amazonaws.com/headerbackground.png) no-repeat center center
+    background-size: cover
+    color: $white
+    position: relative
+    &:before
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: block
+        z-index: 0
+        background-color: rgba($main_dark_color,0.9)
+    .top
+        position: relative
+        width: 100%
+        margin-top: 20px 
+        
+        .toggle-button
+            position: absolute
+            display: block 
+            top: 20px
+            right: 20px
+            height: 45px
+            width: 45px
+            line-height: 45px 
+            margin-top: 0
+            margin-bottom: 0 
+            img 
+                margin-top: 0
+                 
+        .socialbar
+            list-style-type: none
+            display: flex
+            justify-content: space-between
+            position: absolute
+            top: 20px
+            left: 20px 
+            li 
+                margin-left: 30px
+                &:first-child
+                    margin-left: none
+            li a 
+                color: $white
+                font-size: 20px
+    img
+        position: relative
+        margin-top: 80px
+        margin-bottom: 22px
+        width: 90px
+        @include breakpoint(medium)
+            width: inherit
+    h1 
+        position: relative
+        font-size: 36px
+        font-weight: bold
+        max-width: 80%
+        text-align: center
+    p 
+        position: relative
+        width: 80%
+        @include breakpoint(medium)
+            width: 60%
+        text-align: center
+        font-size: 18px
+    h3 
+        position: relative
+        margin-top: 30px
+        margin-bottom: 30px
+    a.button.cta
+        position: relative
+        background: none
+        border: 1px solid $white
+        border-radius: 4px
+    ul.menu
+        position: relative
+        @include menu-direction(vertical)
+        text-align: center
+        @include breakpoint(medium)
+            @include menu-direction(horizontal) 
+        li a 
+            color: $white
+            font-size: 14px
+            line-height: 14px
+
+     

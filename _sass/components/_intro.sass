@@ -1,0 +1,42 @@
+.intro
+    width: 90%
+    max-width: 1200px
+    margin-left: auto
+    margin-right: auto
+    padding: 20px
+
+    h2
+        text-align: center
+        font-size: 36px
+        font-weight: bold
+        margin-bottom: 35px
+    
+    .find-sections
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap 
+        text-align: center
+
+    .find-section
+        max-width: 40%
+        min-width: 200px
+        text-align: center
+        min-height: 420px
+        margin-left: auto
+        margin-right: auto
+        @include breakpoint(medium)
+            max-width: 20%
+            margin-bottom: 0
+        img
+            width: 130px
+            height: 130px
+            border-radius: 400px
+            border: 2px solid darken($main_dark_color, 20%)
+            text-align: center
+            margin-bottom: 23px
+        h3
+            font-size: 30px
+            text-transform: uppercase
+            font-weight: bold
+        
+

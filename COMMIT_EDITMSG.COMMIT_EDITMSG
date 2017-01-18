@@ -1,0 +1,118 @@
+Replaced menu icon
+
+# --------------
+# Please enter the commit message for your changes. Everything below
+# this paragraph is ignored, and an empty message aborts the commit.
+# Just close the window to accept your message.
+diff --git a/_layouts/default.html b/_layouts/default.html
+index ff6d1e7..9a79b1b 100644
+--- a/_layouts/default.html
++++ b/_layouts/default.html
+@@ -18,7 +18,10 @@
+   <div class="header">
+     <div class="wrapper">
+     <h1><a href="{{site.url}}"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
+-    <a href="#" class="toggle-button"><img src="http://sitesforchurch.s3.amazonaws.com/Menu%20IconNH.png" alt="Menu" width="45" height="45px" /></a>
++    <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
++  <i class="fa fa-circle fa-stack-2x"></i>
++  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
++</span></a>
+     </div><!--/wrapper-->
+   </div><!--/header-->
+   <div class="hero" style="background: url({{site.data.settings.main_image}}) no-repeat center center; background-size: cover;">
+diff --git a/_layouts/events.html b/_layouts/events.html
+index 1479f16..ec63470 100644
+--- a/_layouts/events.html
++++ b/_layouts/events.html
+@@ -29,7 +29,10 @@
+   <div class="header">
+     <div class="wrapper">
+     <h1><a href="{{site.url}}"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
+-    <a href="#" class="toggle-button"><img src="http://sitesforchurch.s3.amazonaws.com/Menu%20IconNH.png" alt="Menu" width="45" height="45px" /></a>
++    <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
++  <i class="fa fa-circle fa-stack-2x"></i>
++  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
++</span></a>
+     </div><!--/wrapper-->
+   </div><!--/header-->
+   <div class="hero" style="background: url({{site.data.settings.main_image}}) no-repeat center center; background-size: cover;">
+diff --git a/_layouts/gallery.html b/_layouts/gallery.html
+index bee02e5..fc12134 100644
+--- a/_layouts/gallery.html
++++ b/_layouts/gallery.html
+@@ -18,7 +18,10 @@
+   <div class="header">
+     <div class="wrapper">
+     <h1><a href="{{site.url}}"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
+-    <a href="#" class="toggle-button"><img src="http://sitesforchurch.s3.amazonaws.com/Menu%20IconNH.png" alt="Menu" width="45" height="45px" /></a>
++    <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
++  <i class="fa fa-circle fa-stack-2x"></i>
++  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
++</span></a>
+     </div><!--/wrapper-->
+   </div><!--/header-->
+   <div class="hero" style="background: url({{site.data.settings.main_image}}) no-repeat center center; background-size: cover;">
+diff --git a/_layouts/leader.html b/_layouts/leader.html
+index 88d9296..7f1a0a5 100644
+--- a/_layouts/leader.html
++++ b/_layouts/leader.html
+@@ -18,7 +18,10 @@
+   <div class="header">
+     <div class="wrapper">
+     <h1><a href="{{site.url}}"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
+-    <a href="#" class="toggle-button"><img src="http://sitesforchurch.s3.amazonaws.com/Menu%20IconNH.png" alt="Menu" width="45" height="45px" /></a>
++    <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
++  <i class="fa fa-circle fa-stack-2x"></i>
++  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
++</span></a>
+     </div><!--/wrapper-->
+   </div><!--/header-->
+   <div class="hero" style="background: url({{site.data.settings.main_image}}) no-repeat center center; background-size: cover;">
+diff --git a/_layouts/post.html b/_layouts/post.html
+index ad7a75f..d30343b 100644
+--- a/_layouts/post.html
++++ b/_layouts/post.html
+@@ -18,7 +18,10 @@
+   <div class="header">
+     <div class="wrapper">
+     <h1><a href="{{site.url}}"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
+-    <a href="#" class="toggle-button"><img src="http://sitesforchurch.s3.amazonaws.com/Menu%20IconNH.png" alt="Menu" width="45" height="45px" /></a>
++    <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
++  <i class="fa fa-circle fa-stack-2x"></i>
++  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
++</span></a>
+     </div><!--/wrapper-->
+   </div><!--/header-->
+   <div class="hero" style="background: url({{site.data.settings.main_image}}) no-repeat center center; background-size: cover;">
+diff --git a/_layouts/series.html b/_layouts/series.html
+index 770510e..d7646dd 100644
+--- a/_layouts/series.html
++++ b/_layouts/series.html
+@@ -18,7 +18,10 @@
+   <div class="header">
+     <div class="wrapper">
+     <h1><a href="{{site.url}}"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
+-    <a href="#" class="toggle-button"><img src="http://sitesforchurch.s3.amazonaws.com/Menu%20IconNH.png" alt="Menu" width="45" height="45px" /></a>
++    <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
++  <i class="fa fa-circle fa-stack-2x"></i>
++  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
++</span></a>
+     </div><!--/wrapper-->
+   </div><!--/header-->
+   <div class="hero" style="background: url({{site.data.settings.main_image}}) no-repeat center center; background-size: cover;">
+diff --git a/_layouts/sermons.html b/_layouts/sermons.html
+index c05c7fc..774d53a 100644
+--- a/_layouts/sermons.html
++++ b/_layouts/sermons.html
+@@ -18,7 +18,10 @@
+   <div class="header">
+     <div class="wrapper">
+     <h1><a href="{{site.url}}"><img src="{{settings.church_logo_image_path}}" alt="{{settings.church_name}}" /></a></h1>
+-    <a href="#" class="toggle-button"><img src="http://sitesforchurch.s3.amazonaws.com/Menu%20IconNH.png" alt="Menu" width="45" height="45px" /></a>
++    <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
++  <i class="fa fa-circle fa-stack-2x"></i>
++  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
++</span></a>
+     </div><!--/wrapper-->
+   </div><!--/header-->
+   <div class="hero" style="background: url({{site.data.settings.main_image}}) no-repeat center center; background-size: cover;">
